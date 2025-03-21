@@ -79,6 +79,7 @@ void menu_choice(){
         }
         default: {
             cout<<"Invalid input"<<endl;
+            menu_choice();
         }
     }
 }
@@ -236,6 +237,7 @@ void Rm_employee() {
 
     cout<<"Enter No. of employees you want to remove: "<<endl;
     cin >> choice_remove;
+    choice_remove--;
 
     employees[choice_remove] = Employee();
     for (int i = choice_remove; i < real_size-1; i++) {

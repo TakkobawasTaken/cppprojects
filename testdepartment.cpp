@@ -8,8 +8,7 @@ Department dept;
 void modify_dept();
 
 int main(){
-
-dept.print_depInfo();
+dept.set_depInfo();
     modify_dept();
 }
 
@@ -21,7 +20,8 @@ void modify_dept(){
         cin.ignore();
 
         if (choice_modify_dept == "yes") {
-            dept.modify_depInfo();
+            cout<<"New Department Info:"<<endl;
+            dept.set_depInfo();
         }
         else if (choice_modify_dept == "no") {
             exit(0);

@@ -8,44 +8,27 @@
 using namespace std;
 
 //const int SIZE = 25;
-
-    Department::department(){
-        string id = " ";
-        string name = " ";
-        string dep_history = " ";
-        //Employee emp[25] = {};
-        array<Employee, SIZE> employees{};
-    }
-
-    void add_employee(Employee &emp_in){
-        int size = 0;
-        if(size < 25){
-            employees[size] = emp_in;
-            size++;
-        }
+    Department::Department(){
+      id = "comp_eng";
+      name = "Computer Engineering ";
+      dep_history = "Founded in 2000";
 
     }
 
-    // void remove_employee(Employee emp_in){
-
-    // }
-
-    string Department::get_id(){
-        return id;
+    void Department::print_depInfo(){
+      cout << "Department ID: " << id << endl;
+      cout << "Department Name: " << name << endl;
+      cout << "Department Histories: " << dep_history << endl;
     }
 
-    string Department::get_name(){
-        return name;
-    }
+    void Department::modify_depInfo(){
+      cout << "Enter new Department ID: "<<endl;
+      getline(cin, id);
+      cout << "Enter new Department Name: "<<endl;
+      getline(cin, name);
+      cout << "Enter new Department Histories: "<<endl;
+      getline(cin, dep_history);
+      cout<<"Updated Department Info: "<<endl;
+      print_depInfo();
 
-    void Department::set_name(string name_in){
-        name = name_in;
-    }
-
-    string Department::get_dep_history(){
-        return dep_history;
-    }
-
-    void Department::set_dep_history(string dep_history_in){
-        dep_history = dep_history_in;
     }

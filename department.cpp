@@ -1,15 +1,15 @@
+#include <array>
+#include <string>
+
 #include "department.h"
 #include "employee.h"
-#include <array>
+
 
 using namespace std;
 
 //const int SIZE = 25;
 
-
-
-
-    department::department(){
+    Department::department(){
         string id = " ";
         string name = " ";
         string dep_history = " ";
@@ -30,22 +30,22 @@ using namespace std;
 
     // }
 
-    string get_id(){
+    string Department::get_id(){
         return id;
     }
 
-    string get_name(){
+    string Department::get_name(){
         return name;
     }
 
-    void set_name(string name_in){
+    void Department::set_name(string name_in){
         name = name_in;
     }
 
-    string get_dep_history(){
+    string Department::get_dep_history(){
         return dep_history;
     }
 
-    void set_dep_history(string dep_history_in){
+    void Department::set_dep_history(string dep_history_in){
         dep_history = dep_history_in;
     }

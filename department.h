@@ -9,7 +9,7 @@ using namespace std;
 
 const int SIZE = 25;
 
-class department{
+class Department{
 private:
     string id;
     string name;

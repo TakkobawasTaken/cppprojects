@@ -19,7 +19,7 @@ Employee::Employee() {
 
 void Employee::set_Info(int number){
 
-    cout << "Please enter these data of No."<<number<<" employee in respectively order (separated by space): "<<endl;
+    cout << "Please enter these data of No."<<number+1<<" employee in respectively order (separated by space): "<<endl;
     cout<<"[ID] [last name]"<<endl;
     cin >> employeeId >>last_name;
     cin.ignore();
@@ -39,6 +39,8 @@ void Employee::set_Info(int number){
 
     cout <<"[Telephone area] [Telephone number]"<<endl;
     cin >>tel_area>>tel_num;
+
+    cout <<"----------------------"<<endl;
 }
 
 void Employee::set_IdNum(int id){
@@ -87,6 +89,10 @@ int Employee::getHiredyear() {
 
 double Employee::getSalary() {
     return salary;
+}
+
+int Employee::getID() {
+  return employeeId;
 }
 
 void Employee::print_Info(int num){

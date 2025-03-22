@@ -18,7 +18,7 @@ Employee::Employee() {
 }
 
 void Employee::set_Info(int number){
-
+	//Set all info initially
     cout << "Please enter these data of No."<<number+1<<" employee in respectively order (separated by space): "<<endl;
     cout<<"[ID] [last name]"<<endl;
     cin >> employeeId >>last_name;
@@ -42,6 +42,9 @@ void Employee::set_Info(int number){
 
     cout <<"----------------------"<<endl;
 }
+
+
+//ALL below function are used to modify info
 
 void Employee::set_IdNum(int id){
     employeeId = id;
@@ -95,6 +98,7 @@ int Employee::getID() {
   return employeeId;
 }
 
+//Print all info of employees
 void Employee::print_Info(int num){
     cout<<"Employee No."<<num+1<<endl;
     cout << "Id: " << employeeId << endl;
@@ -105,3 +109,5 @@ void Employee::print_Info(int num){
     cout<<"Address: "<<address<<endl;
     cout<<"Telephone: "<<tel_area<<" "<<tel_num<<endl;
 }
+
+

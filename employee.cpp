@@ -1,11 +1,16 @@
-//employee.cpp
-//member function
+//Joseph Tchatchoua Nchuisseu ID: 40309336
+//
+//employee class implementation
+
+
+
 #include <iostream>
 #include "employee.h"
 #include <iomanip>
 using namespace std;
 
-Employee::Employee() {
+
+Employee::Employee() { //Default constructor
     employeeId = 0;
     first_name = "";
     last_name = "";
@@ -17,7 +22,7 @@ Employee::Employee() {
     tel_num = "";
 }
 
-void Employee::set_Info(int number){
+void Employee::set_Info(int number){ //Modifying attributes of employee class
 
     cout << "Please enter these data of No."<<number+1<<" employee in respectively order (separated by space): "<<endl;
     cout<<"[ID] [last name]"<<endl;
@@ -43,6 +48,8 @@ void Employee::set_Info(int number){
     cout <<"----------------------"<<endl;
 }
 
+
+//Accessors and mutators of the attributes
 void Employee::set_IdNum(int id){
     employeeId = id;
 }
@@ -95,6 +102,7 @@ int Employee::getID() {
   return employeeId;
 }
 
+//Returning the employees attributes
 void Employee::print_Info(int num){
     cout<<"Employee No."<<num+1<<endl;
     cout << "Id: " << employeeId << endl;

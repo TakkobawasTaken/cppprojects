@@ -1,3 +1,8 @@
+//Joseph Tchatchoua Nchuisseu ID: 40309336
+//
+//testdepartment class implementation
+
+
 #include <iostream>
 #include <array>
 #include "employee.h"
@@ -9,6 +14,7 @@ int real_size = 0;
 Department dept;
 array<Employee, employee_max> employees;
 
+//prototypes
 void Initialize_employee();
 void Rm_employee();
 void modify_dept();
@@ -19,16 +25,16 @@ void Employee_editor();
 int main(){
 
 
-    dept.set_depInfo();
+    dept.set_depInfo(); //Prompting the user departement info
 
 
-    cout <<"Please enter 5 employee info to add them to this department: "<<endl;
+    cout <<"Please enter 5 employee info to add them to this department: "<<endl; 
     real_size +=5;
     Initialize_employee();
 
 }
 
-void menu_choice(){
+void menu_choice(){ // Displays the options available
     int menu_num;
     cout<<"------------------------------"<<endl;
     cout <<"Select an option:"<<endl;
@@ -43,7 +49,7 @@ void menu_choice(){
     cin >> menu_num;
     cin.ignore();
 
-    switch (menu_num) {
+    switch (menu_num) { //Handeling cases of options
         case 1: {
             Add_employee();
             break;
@@ -84,7 +90,7 @@ void menu_choice(){
     }
 }
 
-void Employee_editor() {
+void Employee_editor() { //Englobes all modification of attributes of employee objects
     int emp_input;
     int emp_num;
     int modify_data;
@@ -182,7 +188,7 @@ void Employee_editor() {
     menu_choice();
 }
 
-void searchID() {
+void searchID() { //Searches for ID
     int search_id;
     cout<< "Enter employee ID: ";
     cin >> search_id;
@@ -200,7 +206,7 @@ void searchID() {
     }
 }
 
-void Initialize_employee() {
+void Initialize_employee() { //Enables attributes modification for a certain number of employees
     for (int i = 0; i < real_size; i++) {
         employees[i].set_Info(i);
     }
@@ -208,7 +214,7 @@ void Initialize_employee() {
     menu_choice();
 }
 
-void Add_employee() {
+void Add_employee() { //Add employees to the array
     int old_size = real_size;
     int add_size;
     while (true) {
@@ -231,7 +237,7 @@ void Add_employee() {
     menu_choice();
 }
 
-void Rm_employee() {
+void Rm_employee() { //Remove employees from the array
 
     int choice_remove;
 
@@ -253,13 +259,13 @@ void Rm_employee() {
 
 }
 
-void modify_dept() {
+void modify_dept() { //Modify the department information
     cout<<"New Department Info:"<<endl;
     dept.set_depInfo();
     menu_choice();
 }
 
-void printer() {
+void printer() { //Return attributes of the employees
     cout<<"------------------------------"<<endl;
     for (int i = 0; i < real_size; i++) {
         employees[i].print_Info(i);
